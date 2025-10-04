@@ -23,8 +23,8 @@ export function DeletePetButton({ petId, petName }: DeletePetButtonProps) {
     try {
       setIsDeleting(true);
       await deletePet(petId);
-      router.push('/');
       router.refresh();
+      router.push('/');
     } catch (error) {
       console.error('Error deleting pet:', error);
       alert('Erro ao excluir o animal. Por favor, tente novamente.');

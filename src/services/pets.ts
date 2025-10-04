@@ -3,8 +3,7 @@ import { API_ROUTES } from '@/config/api';
 
 export async function getPets() {
   const response = await fetch(API_ROUTES.pets, {
-    cache: 'no-store',
-    next: { revalidate: 0 },
+    cache: 'no-store'
   });
   if (!response.ok) {
     throw new Error('Failed to fetch pets');
@@ -14,8 +13,7 @@ export async function getPets() {
 
 export async function getPet(id: string) {
   const response = await fetch(API_ROUTES.pet(id), {
-    cache: 'no-store',
-    next: { revalidate: 0 },
+    cache: 'no-store'
   });
   if (!response.ok) {
     throw new Error('Failed to fetch pet');
@@ -58,7 +56,7 @@ export async function deletePet(id: string) {
   if (!response.ok) {
     throw new Error('Failed to delete pet');
   }
-  return response.json();
+  return true; // Success, no content to return
 }
 
 export async function uploadImage(file: File) {
