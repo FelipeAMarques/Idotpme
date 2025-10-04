@@ -13,9 +13,9 @@ interface FilterProps {
 
 export function PetFilters({ filters, onFilterChange }: FilterProps) {
   return (
-    <div className="flex flex-wrap gap-4 p-4 bg-white rounded-lg shadow-sm">
+    <div className="flex flex-wrap gap-4 p-4 bg-[#2d2d2d] rounded-lg shadow-lg border border-gray-700">
       <select
-        className="p-2 border rounded-md min-w-[200px]"
+        className="p-2 bg-[#1a1a1a] border-gray-700 text-gray-200 rounded-md min-w-[200px] focus:ring-blue-500 focus:border-blue-500"
         value={filters.species}
         onChange={(e) => onFilterChange('species', e.target.value)}
       >
@@ -25,7 +25,7 @@ export function PetFilters({ filters, onFilterChange }: FilterProps) {
       </select>
 
       <select
-        className="p-2 border rounded-md min-w-[200px]"
+        className="p-2 bg-[#1a1a1a] border-gray-700 text-gray-200 rounded-md min-w-[200px] focus:ring-blue-500 focus:border-blue-500"
         value={filters.ageGroup}
         onChange={(e) => onFilterChange('ageGroup', e.target.value)}
       >
@@ -36,7 +36,7 @@ export function PetFilters({ filters, onFilterChange }: FilterProps) {
       </select>
 
       <select
-        className="p-2 border rounded-md min-w-[200px]"
+        className="p-2 bg-[#1a1a1a] border-gray-700 text-gray-200 rounded-md min-w-[200px] focus:ring-blue-500 focus:border-blue-500"
         value={filters.size}
         onChange={(e) => onFilterChange('size', e.target.value)}
       >
