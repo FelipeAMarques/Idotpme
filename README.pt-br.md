@@ -1,4 +1,4 @@
-English](README.md) | [Português do Brasil](README.pt-br.md)
+[English](README.md) | [Português do Brasil](README.pt-br.md)
 
 # React + Next.js + TypeScript + Docker
 
