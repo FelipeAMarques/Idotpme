@@ -45,7 +45,11 @@ export function PetCard({ pet }: PetCardProps) {
   };
 
   return (
-    <div className="bg-[#2d2d2d] rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow relative group border border-gray-700">
+    <div className="rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow relative group" style={{ 
+      background: 'var(--card-bg)',
+      borderColor: 'var(--text-secondary)',
+      borderWidth: '1px'
+    }}>
       <div className="relative h-48">
         <Image
           src={pet.images[0]}

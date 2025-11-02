@@ -67,32 +67,48 @@ export default function NewPetPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 py-8">
+    <div className="min-h-screen py-8" style={{ background: 'var(--background)' }}>
       <div className="container mx-auto px-4">
-        <h1 className="text-3xl font-bold mb-8">Adicionar Novo Animal</h1>
+        <h1 className="text-3xl font-bold mb-8" style={{ color: 'var(--text-heading)' }}>
+          Adicionar Novo Animal
+        </h1>
         
-        <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-md p-6 max-w-2xl mx-auto">
+        <form onSubmit={handleSubmit} className="rounded-lg shadow-md p-6 max-w-2xl mx-auto" style={{ background: 'var(--card-bg)' }}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Informações Básicas */}
             <div className="space-y-4">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700">Nome</label>
+                <label htmlFor="name" className="block text-sm font-medium" style={{ color: 'var(--text-label)' }}>
+                  Nome
+                </label>
                 <input
                   type="text"
                   id="name"
                   name="name"
                   required
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  className="mt-1 block w-full rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  style={{ 
+                    background: 'var(--card-bg)', 
+                    color: 'var(--text-input)',
+                    borderColor: 'var(--border-input)'
+                  }}
                 />
               </div>
 
               <div>
-                <label htmlFor="species" className="block text-sm font-medium text-gray-700">Espécie</label>
+                <label htmlFor="species" className="block text-sm font-medium" style={{ color: 'var(--text-label)' }}>
+                  Espécie
+                </label>
                 <select
                   id="species"
                   name="species"
                   required
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  className="mt-1 block w-full rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  style={{ 
+                    background: 'var(--card-bg)', 
+                    color: 'var(--text-input)',
+                    borderColor: 'var(--border-input)'
+                  }}
                 >
                   <option value="dog">Cachorro</option>
                   <option value="cat">Gato</option>
@@ -100,22 +116,36 @@ export default function NewPetPage() {
               </div>
 
               <div>
-                <label htmlFor="breed" className="block text-sm font-medium text-gray-700">Raça</label>
+                <label htmlFor="breed" className="block text-sm font-medium" style={{ color: 'var(--text-label)' }}>
+                  Raça
+                </label>
                 <input
                   type="text"
                   id="breed"
                   name="breed"
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  className="mt-1 block w-full rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  style={{ 
+                    background: 'var(--card-bg)', 
+                    color: 'var(--text-input)',
+                    borderColor: 'var(--border-input)'
+                  }}
                 />
               </div>
 
               <div>
-                <label htmlFor="ageGroup" className="block text-sm font-medium text-gray-700">Faixa Etária</label>
+                <label htmlFor="ageGroup" className="block text-sm font-medium" style={{ color: 'var(--text-label)' }}>
+                  Faixa Etária
+                </label>
                 <select
                   id="ageGroup"
                   name="ageGroup"
                   required
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  className="mt-1 block w-full rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  style={{ 
+                    background: 'var(--card-bg)', 
+                    color: 'var(--text-input)',
+                    borderColor: 'var(--border-input)'
+                  }}
                 >
                   <option value="puppy">Filhote</option>
                   <option value="adult">Adulto</option>
@@ -124,14 +154,21 @@ export default function NewPetPage() {
               </div>
 
               <div>
-                <label htmlFor="approximateAge" className="block text-sm font-medium text-gray-700">Idade Aproximada</label>
+                <label htmlFor="approximateAge" className="block text-sm font-medium" style={{ color: 'var(--text-label)' }}>
+                  Idade Aproximada
+                </label>
                 <input
                   type="text"
                   id="approximateAge"
                   name="approximateAge"
                   required
                   placeholder="ex: 2 anos"
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  className="mt-1 block w-full rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  style={{ 
+                    background: 'var(--card-bg)', 
+                    color: 'var(--text-input)',
+                    borderColor: 'var(--border-input)'
+                  }}
                 />
               </div>
             </div>
@@ -139,12 +176,19 @@ export default function NewPetPage() {
             {/* Mais Informações */}
             <div className="space-y-4">
               <div>
-                <label htmlFor="size" className="block text-sm font-medium text-gray-700">Porte</label>
+                <label htmlFor="size" className="block text-sm font-medium" style={{ color: 'var(--text-label)' }}>
+                  Porte
+                </label>
                 <select
                   id="size"
                   name="size"
                   required
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  className="mt-1 block w-full rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  style={{ 
+                    background: 'var(--card-bg)', 
+                    color: 'var(--text-input)',
+                    borderColor: 'var(--border-input)'
+                  }}
                 >
                   <option value="small">Pequeno</option>
                   <option value="medium">Médio</option>
@@ -153,12 +197,19 @@ export default function NewPetPage() {
               </div>
 
               <div>
-                <label htmlFor="gender" className="block text-sm font-medium text-gray-700">Gênero</label>
+                <label htmlFor="gender" className="block text-sm font-medium" style={{ color: 'var(--text-label)' }}>
+                  Gênero
+                </label>
                 <select
                   id="gender"
                   name="gender"
                   required
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  className="mt-1 block w-full rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  style={{ 
+                    background: 'var(--card-bg)', 
+                    color: 'var(--text-input)',
+                    borderColor: 'var(--border-input)'
+                  }}
                 >
                   <option value="male">Macho</option>
                   <option value="female">Fêmea</option>
@@ -166,19 +217,28 @@ export default function NewPetPage() {
               </div>
 
               <div>
-                <label htmlFor="location" className="block text-sm font-medium text-gray-700">Localização</label>
+                <label htmlFor="location" className="block text-sm font-medium" style={{ color: 'var(--text-label)' }}>
+                  Localização
+                </label>
                 <input
                   type="text"
                   id="location"
                   name="location"
                   required
                   placeholder="ex: São Paulo, SP"
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  className="mt-1 block w-full rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  style={{ 
+                    background: 'var(--card-bg)', 
+                    color: 'var(--text-input)',
+                    borderColor: 'var(--border-input)'
+                  }}
                 />
               </div>
 
               <div className="space-y-2">
-                <label className="block text-sm font-medium text-gray-700">Status de Saúde</label>
+                <label className="block text-sm font-medium" style={{ color: 'var(--text-label)' }}>
+                  Status de Saúde
+                </label>
                 <div className="flex space-x-4">
                   <label className="flex items-center">
                     <input
@@ -187,7 +247,7 @@ export default function NewPetPage() {
                       value="true"
                       className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                     />
-                    <span className="ml-2">Vacinado</span>
+                    <span className="ml-2" style={{ color: 'var(--text-input)' }}>Vacinado</span>
                   </label>
                   <label className="flex items-center">
                     <input
@@ -196,7 +256,7 @@ export default function NewPetPage() {
                       value="true"
                       className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                     />
-                    <span className="ml-2">Castrado</span>
+                    <span className="ml-2" style={{ color: 'var(--text-input)' }}>Castrado</span>
                   </label>
                 </div>
               </div>
@@ -205,14 +265,20 @@ export default function NewPetPage() {
 
           {/* Seção de Fotos */}
           <div className="mt-6">
-            <label className="block text-sm font-medium text-gray-700">Fotos</label>
+            <label className="block text-sm font-medium" style={{ color: 'var(--text-label)' }}>
+              Fotos
+            </label>
             <div className="mt-2">
               <input
                 type="file"
                 accept="image/*"
                 multiple
                 onChange={handleImageUpload}
-                className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+                className="block w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold hover:file:bg-blue-100"
+                style={{ 
+                  color: 'var(--text-input)',
+                  borderColor: 'var(--border-input)'
+                }}
               />
             </div>
             {images.length > 0 && (
@@ -231,19 +297,26 @@ export default function NewPetPage() {
 
           {/* Descrição */}
           <div className="mt-6">
-            <label htmlFor="description" className="block text-sm font-medium text-gray-700">Descrição</label>
+            <label htmlFor="description" className="block text-sm font-medium" style={{ color: 'var(--text-label)' }}>
+              Descrição
+            </label>
             <textarea
               id="description"
               name="description"
               required
               rows={4}
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              className="mt-1 block w-full rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              style={{ 
+                background: 'var(--card-bg)', 
+                color: 'var(--text-input)',
+                borderColor: 'var(--border-input)'
+              }}
             />
           </div>
 
           {/* Temperamento */}
           <div className="mt-6">
-            <label htmlFor="temperament" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="temperament" className="block text-sm font-medium" style={{ color: 'var(--text-label)' }}>
               Temperamento (separado por vírgulas)
             </label>
             <input
@@ -252,13 +325,18 @@ export default function NewPetPage() {
               name="temperament"
               required
               placeholder="ex: Amigável, Brincalhão, Dócil"
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              className="mt-1 block w-full rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              style={{ 
+                background: 'var(--card-bg)', 
+                color: 'var(--text-input)',
+                borderColor: 'var(--border-input)'
+              }}
             />
           </div>
 
           {/* Requisitos */}
           <div className="mt-6">
-            <label htmlFor="requirements" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="requirements" className="block text-sm font-medium" style={{ color: 'var(--text-label)' }}>
               Requisitos para Adoção (separado por vírgulas)
             </label>
             <input
@@ -266,7 +344,12 @@ export default function NewPetPage() {
               id="requirements"
               name="requirements"
               placeholder="ex: Ter espaço adequado, Ter disponibilidade para passeios"
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              className="mt-1 block w-full rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              style={{ 
+                background: 'var(--card-bg)', 
+                color: 'var(--text-input)',
+                borderColor: 'var(--border-input)'
+              }}
             />
           </div>
 
@@ -275,11 +358,11 @@ export default function NewPetPage() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className={`w-full py-3 px-4 rounded-md text-white font-semibold ${
-                isSubmitting
-                  ? 'bg-blue-400 cursor-not-allowed'
-                  : 'bg-blue-600 hover:bg-blue-700'
-              }`}
+              className="w-full py-3 px-4 rounded-md text-white font-semibold transition-colors"
+              style={{
+                background: isSubmitting ? 'var(--primary-hover)' : 'var(--primary)',
+                cursor: isSubmitting ? 'not-allowed' : 'pointer'
+              }}
             >
               {isSubmitting ? 'Cadastrando...' : 'Cadastrar Animal'}
             </button>
