@@ -17,9 +17,9 @@ export default async function PetDetailsPage({ params }: { params: { id: string 
   }
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen" style={{ background: 'var(--background)' }}>
       <main className="container mx-auto py-8 px-4">
-        <div className="bg-white rounded-lg shadow-md overflow-hidden">
+        <div className="rounded-lg shadow-md overflow-hidden" style={{ background: 'var(--card-bg)' }}>
           {/* Galeria de Imagens */}
           <div className="relative h-96">
             <Image

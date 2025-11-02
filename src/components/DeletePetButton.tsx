@@ -38,11 +38,11 @@ export function DeletePetButton({ petId, petName }: DeletePetButtonProps) {
       <button
         onClick={handleDelete}
         disabled={isDeleting}
-        className={`w-full md:w-auto px-8 py-3 rounded-md text-white font-semibold ${
-          showConfirmation 
-            ? 'bg-red-600 hover:bg-red-700' 
-            : 'bg-gray-600 hover:bg-gray-700'
-        } transition-colors`}
+        className="w-full md:w-auto px-8 py-3 rounded-md font-semibold transition-colors"
+        style={{
+          background: showConfirmation ? 'var(--danger)' : 'var(--secondary)',
+          color: 'var(--text-primary)'
+        }}
       >
         {isDeleting
           ? 'Excluindo...'
@@ -53,7 +53,11 @@ export function DeletePetButton({ petId, petName }: DeletePetButtonProps) {
       {showConfirmation && (
         <button
           onClick={() => setShowConfirmation(false)}
-          className="mt-2 w-full md:w-auto px-8 py-3 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 transition-colors"
+          className="mt-2 w-full md:w-auto px-8 py-3 rounded-md transition-colors"
+          style={{
+            background: 'var(--card-bg)',
+            color: 'var(--text-primary)'
+          }}
         >
           Cancelar
         </button>
